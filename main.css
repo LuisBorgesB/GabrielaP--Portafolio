@@ -1,0 +1,30 @@
+@font-face{
+    font-family: 'Rosmatika';
+    src: url(/recursos/Rosmatika.ttf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root{
+    --color1: #233342;
+    --color2: #D3835F;
+    --color3: #E6E6E6;
+    --color4: #605E5D;
+    --color5: #233342e3;
+    --color6: #ffffff;
+    --colorScroll: rgba(211, 132, 95, 0.486);
+    --nivel1: 5;
+    --nivel2: 10;
+    --nivel3: 15;
+    --nivel4: 20;
+    --nivel5: 25;
+    --nivel6: 30;
+    --border: 1px solid #ffffff;
+    --border2: 3px solid #D3835F;
+}
+body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: var(--color3);
+    font-family: 'Poppins', sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
