@@ -162,3 +162,98 @@ body{
     background-repeat: no-repeat;
     z-index: var(--nivel1);
 }
+/* SOBRE MI */
+#sobreMi{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--color3);
+    z-index: var(--nivel2);
+}
+#contenedorImgFotoP{
+    position: absolute;
+    top: calc(25% - (13em/2));
+    left: calc(50% - (13em/2));
+    width: 13em;
+    height: 13em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#imgFotoP{
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    background-image: url(recursos/FotoAD.jpg);
+    background-repeat: no-repeat;
+    background-position-x: .3em;
+    background-size: 120%;
+    transform: rotate(25deg);
+}
+#contenedorBarraInferior{
+    position: absolute;
+    width: 9.7em;
+    height: 9.7em;
+    border: solid .7em transparent;
+    border-top-color: var(--color1);
+    border-right-color: var(--color1);
+    border-radius: 50%;
+    animation: GiroDe 4s linear infinite;
+}
+#contenedorBarraSuperior{
+    position: absolute;
+    width: 11.1em;
+    height: 11.1em;
+    border: solid .7em transparent;
+    border-bottom-color: var(--color2);
+    border-left-color: var(--color2);
+    border-radius: 50%;
+    animation: GiroIz 4s linear infinite;
+}
+@keyframes GiroDe{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes GiroIz{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+#textoSobreMi{
+    position: absolute;
+    top: calc(65% - 15%);
+    left: calc(50% - 40%);
+    width: 80%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#textoSobreMi p{
+    text-align: justify;
+    text-indent: 2em;
+    font-size: .9em;
+    color: var(--color2);
+    font-weight: bold;
+}
+#tituloPortafolio{
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 3.5em);
+    width: 7em;
+    height: 2em;
+    font-size: .9em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color1);
+    color: var(--color6);
+}
