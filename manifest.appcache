@@ -1,0 +1,11 @@
+CACHE MANIFEST
+#DATE 2020-05-02
+CACHE:
+index.html
+main.css
+main.js
+recursos
+
+NETWORK:
+*
+FALLBACK:

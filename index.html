@@ -1,15 +1,33 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" manifest="manifest.appcache">
 <head>
+    <title>Gabriela Prieto</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="recursos/fcon.png" type="image/x-icon">
+    <meta name="author" content="Luis Alejandro Borges">
+    <meta name="theme-color" content="#233342">
+    <meta name="description" content="Hola, soy Gabriela Prieto. Diseñadora grafica y asesora en marketing digital, me dedico a ayudar a emprendedores para que puedan desarrollar o potenciar su marca y darse a conocer en el mundo virtual.">
+    <!-- OPEN GRAPH -->
+    <meta property="og:title" content="Gabriela Prieto">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="recursos/portada.jpg">
+    <meta property="og:description" content="Hola, soy Gabriela Prieto. Diseñadora grafica y asesora en marketing digital, me dedico a ayudar a emprendedores para que puedan desarrollar o potenciar su marca y darse a conocer en el mundo virtual." />
+    <!-- Twitter Cards -->
+    <meta property="twitter:card" content="">
+    <meta property="twitter:creator" content="">
+    <meta property="twitter:title" content="Gabriela Prieto">
+    <meta property="twitter:description" content="Hola, soy Gabriela Prieto. Diseñadora grafica y asesora en marketing digital, me dedico a ayudar a emprendedores para que puedan desarrollar o potenciar su marca y darse a conocer en el mundo virtual.">
+    <meta property="twitter:image:src" content="recursos/portada.jpg">
+    <!-- LINK-SCRIPT -->
+    <link rel="shortcut icon" href="recursos/fcon.svg" type="image/x-icon">
+    <link rel="preload" href="main.css" as="style">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="mq.css">
-    <title>Gabriela Prieto</title>
+    <script src="main.js" defer></script>
 </head>
-<body>
+<body style="visibility: hidden;">
     <div id="fondoOscuroGeneral"></div>
+    <p id="cerrar">X</p>
     <!-- SECCION EMERGENTES -->
     <div id="emergenteTelefono">
         <div id="llamar"><a href="tel:541124714416"><p>Llamar...</p></a></div>
@@ -27,7 +45,7 @@
         </div>
     </div>
     <div id="confirmacionCopy">Copiado en el portapapeles</div>
-    <!-- FIN SECCION EMERGENTES -->
+    <!-- SECCION PRINCIPAL -->
     <header id="encabezado">
         <div id="redesSociales">
             <div id="iconRedeS">
@@ -43,11 +61,11 @@
         <div id="portada" class="portadaArriba">
             <div id="imgMenu"></div>
             <h1>Hola! Soy Gabriela Prieto</h1>
-            <p>disenadora grafica y asesora en marketing digital,
+            <p>diseñadora grafica y asesora en marketing digital,
                 me dedico a ayudar a emprendedores para que puedan desarrollar
                 o potenciar su marca y darse a conocer en el mundo virtual.
             </p>
-            <div id="botonTeCuento">¿Te cuento como?</div>
+            <a href="mailto:prieto.gbr@gmail.com?Subject=Hola,%20soy%20un%20emprendedor%20y%20me%20gustaria%20desarrollar%20y/o%20potenciar%20mi%20marca"><div id="botonTeCuento">¿Te cuento como?</div></a>
         </div>
     </header>
     <section id="wave"></section>
@@ -83,14 +101,14 @@
         <div id="proyecto_2" class="proyectos"><img src="recursos/proyecto2.jpg" alt="proyecto"></div>
         <div id="proyecto_3" class="proyectos"><img src="recursos/proyecto3.jpg" alt="proyecto"></div>
         <div id="proyecto_4" class="proyectos"><img src="recursos/proyecto4.jpg" alt="proyecto"></div>
-        <div id="proyecto_5" class="proyectos"><img src="recursos/proyecto2.jpg" alt="proyecto"></div>
-        <div id="proyecto_6" class="proyectos"><img src="recursos/proyecto2.jpg" alt="proyecto"></div>
-        <div id="proyecto_7" class="proyectos"><img src="recursos/proyecto2.jpg" alt="proyecto"></div>
-        <div id="proyecto_8" class="proyectos"><img src="recursos/proyecto2.jpg" alt="proyecto"></div>
-        <div id="proyecto_9" class="proyectos"><img src="recursos/proyecto2.jpg" alt="proyecto"></div>
+        <div id="proyecto_5" class="proyectos"><img src="recursos/Dise5.jpg" alt="proyecto"><img src="recursos/proyecto5.jpg" alt="proyecto"></div>
+        <div id="proyecto_6" class="proyectos"><img src="recursos/Dise6.jpg" alt="proyecto"></div>
+        <div id="proyecto_7" class="proyectos"><img src="recursos/Dise7.jpg" alt="proyecto"><img src="recursos/proyecto7.jpg" alt="proyecto"></div>
+        <div id="proyecto_8" class="proyectos"><img src="recursos/Dise8.jpg" alt="proyecto"><img src="recursos/proyecto8_2.jpg" alt="proyecto"><img src="recursos/proyecto8_3.jpg" alt="proyecto"><img src="recursos/proyecto8_4.jpg" alt="proyecto"></div>
+        <div id="proyecto_9" class="proyectos"><img src="recursos/Dise9.jpg" alt="proyecto"></div>
+        <div id="contenedorFondoBotones"></div>
         <div id="botonAtras"><img src="recursos/angle-left.svg" alt="atras"></div>
         <div id="botonSiguiente"><img src="recursos/angle-right.svg" alt="siguiente"></div>
     </div>
-<script src="main.js"></script>
 </body>
 </html>

@@ -1,8 +1,9 @@
-@font-face{
-    font-family: 'Rosmatika';
-    src: url(/recursos/Rosmatika.ttf);
-}
+@charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+font-face{
+    src: url(recursos/Rosmatika.ttf);
+    font-family: 'Rosmatika';
+}
 :root{
     --color1: #233342;
     --color2: #D3835F;
@@ -32,7 +33,6 @@ body{
 }
 body::-webkit-scrollbar{
     width: 10px;
-    transform: trans;
 }
 body::-webkit-scrollbar-thumb{
     background-color: var(--colorScroll);
@@ -51,6 +51,22 @@ body::-webkit-scrollbar-thumb:hover{
     z-index: var(--nivel4);
     overflow: hidden;
     visibility: hidden;
+}
+#cerrar{
+    width: 1.5em;
+    height: 1.5em;
+    top: 0em;
+    right: calc(10% - 5% - (1.5em/2));
+    position: fixed;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: var(--nivel6);
+    color: var(--color6);
+    visibility: hidden;
+    font-weight: bold;
 }
 /* EMCABEZADO */
 #encabezado{
@@ -117,10 +133,10 @@ body::-webkit-scrollbar-thumb:hover{
     }
 #imgMenu{
     position: fixed;
-    top: 1em;
-    right: 1em;
-    width: 2em;
-    height: 2em;
+    top: 2em;
+    right: 2em;
+    width: 2.5em;
+    height: 2.5em;
     background-image: url(recursos/menu.svg);
     background-position: center;
     background-repeat: no-repeat;
@@ -133,7 +149,7 @@ body::-webkit-scrollbar-thumb:hover{
     top: 6em;
     left: 1em;
     font-family: 'Rosmatika', Arial, Helvetica, sans-serif;
-    font-size: 1.3em;
+    font-size: 1.2em;
     color: var(--color2);
     animation: dezplazar 1s 1;
 }
@@ -180,7 +196,7 @@ body::-webkit-scrollbar-thumb:hover{
     height: 350px;
     top: calc(802px - 350px);
     left: 0;
-    background-image: url(recursos/wave.png);
+    background-image: url(recursos/wave.svg);
     background-size: cover;
     background-repeat: no-repeat;
     z-index: var(--nivel1);
@@ -424,7 +440,7 @@ body::-webkit-scrollbar-thumb:hover{
     justify-content: center;
 }
 
-/*  */
+/* DETALLES PROYECTOS */
 
 #contenedorDetallePortafolio{
     position: fixed;
@@ -432,10 +448,17 @@ body::-webkit-scrollbar-thumb:hover{
     left: calc(50% - (80%/2));
     width: 80%;
     height: 100%;
-    background-color: #ffffff6e;
+    background-color: #ffffff;
     visibility: hidden;
     overflow: hidden;
-    z-index: calc(var(--nivel5));
+    z-index: var(--nivel5);
+}
+#contenedorFondoBotones{
+    position: absolute;
+    bottom: 0;
+    background-color: var(--color4);
+    width: 100%;
+    height: 3.5em;
 }
 #botonSiguiente, #botonAtras{
     width: 1.5em;
@@ -448,14 +471,14 @@ body::-webkit-scrollbar-thumb:hover{
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    z-index: var(--nivel1);
 }
 #botonAtras{
-    left: 2em;
+    left: 3em;
 }
 #botonSiguiente{
-    right: 2em;
+    right: 3em;
 }
-
 #botonSiguiente img, #botonAtras img{
     width: 80%;
     height: 80%;
@@ -483,3 +506,360 @@ body::-webkit-scrollbar-thumb:hover{
 #proyecto_1, #proyecto_2, #proyecto_3, #proyecto_4, #proyecto_5, #proyecto_6, #proyecto_7, #proyecto_8, #proyecto_9{
     visibility: hidden;
 }
+
+/* MEDIA QUERY */
+
+@media (min-width: 426px) and (max-width: 570px) {
+    /* EMCABEZADO */
+    #portada{
+        background-size: 370%;
+    }
+    #portada h1{
+        top: 8em;
+    }
+    #portada p{
+        top: 14em;
+    }
+    /* SOBRE MI */
+    #textoSobreMi{
+        left: calc(50% - 35%);
+        width: 70%;
+    }
+    /* SECCION EMERGENTES */
+    #emergenteTelefono, #emergenteCorreo{
+        left: calc(50% - 35%);
+        width: 65%;
+    }
+    }
+    
+    @media (min-width: 571px) and (max-width: 768px) {
+    /* EMCABEZADO */
+    #iconRedeS{
+        width: 70%;
+    }
+    #portada{
+        background-size: 280%;
+    }
+    #portada h1{
+        font-size: 1.5em;
+        top: 6.3em;
+        left: 2em;
+    }
+    #portada p{
+        top: 12em;
+        width: 80%;
+        font-size: 1em;
+        left: 3em;
+    }
+    #botonTeCuento{
+        top: 21em;
+        right: 6em;
+        font-size: 1em;
+    }
+    /* SOBRE MI */
+    #textoSobreMi{
+        left: calc(50% - 30%);
+        width: 60%;
+        height: 35%;
+    }
+    #textoSobreMi p{
+        font-size: 1em;
+    }
+    #tituloPortafolio{
+        font-size: 1em;
+    }
+    /* SECCION EMERGENTES */
+    #emergenteTelefono, #emergenteCorreo{
+        left: calc(50% - 25%);
+        width: 50%;
+    }
+    }
+    
+    
+    @media (min-width: 769px) and (max-width: 1024px) {
+    /* EMCABEZADO */
+    #iconRedeS{
+        width: 60%;
+    }
+    #portada{
+        background-position-x: -10em;
+        background-size: 200%;
+    }
+    #portada h1{
+        top: 6em;
+        left: 4em;
+        font-size: 1.5em;
+    }
+    #portada p{
+        top: 12em;
+        left: 6em;
+        width: 55%;
+        font-size: 1em;
+    }
+    #botonTeCuento{
+        top: 21em;
+        right: 5em;
+        font-size: 1em;
+    }
+    /* SOBRE MI */
+    #contenedorImgFotoP{
+        top: calc(25% - (16em/2));
+        left: calc(50% - (16em/2));
+        width: 16em;
+        height: 16em;
+    }
+    #imgFotoP{
+        width: 12em;
+        height: 12em;
+    }
+    #contenedorBarraInferior{
+        width: 11.9em;
+        height: 11.9em;
+        border: solid .9em transparent;
+        border-top-color: var(--color1);
+        border-right-color: var(--color1);
+    }
+    #contenedorBarraSuperior{
+        width: 13.5em;
+        height: 13.5em;
+        border: solid .9em transparent;
+        border-bottom-color: var(--color2);
+        border-left-color: var(--color2);
+    }
+    #textoSobreMi{
+        left: calc(50% - 30%);
+        width: 60%;
+    }
+    #textoSobreMi p{
+        font-size: 1em;
+    }
+    #tituloPortafolio{
+        font-size: 1em;
+    }
+    /* PROYECTOS */
+    #Portafolio{
+        height: calc((20em*5));
+        grid-template-columns: repeat(2, 18em);
+        grid-template-rows: repeat(5, 18em);
+    }
+    /* SECCION EMERGENTES */
+    #emergenteTelefono, #emergenteCorreo{
+        left: calc(50% - 20%);
+        width: 40%;
+    }
+    /* DETALLES PROYECTOS */
+    .proyectos::-webkit-scrollbar{
+        width: 10px;
+    }
+    .proyectos::-webkit-scrollbar-thumb{
+        background-color: var(--colorScroll);
+        border-radius: 5px;
+    }
+    }
+    @media (min-width: 1025px) and (max-width: 1280px) {
+    #cerrar{
+        display: none;
+    }
+    /* EMCABEZADO */
+    #iconRedeS{
+        width: 60%;
+    }
+    .redesS{
+        width: 2.5em;
+        height: 2.5em;
+    }
+    .redesS img{
+        width: 1.5em;
+        height: 1.5em;
+    }
+    .redesS:hover{
+        background-color: var(--color2);
+        transform: rotate(-30deg);
+        transition: .5s;
+    }
+    .redesS img:hover{
+        width: 1.7em;
+        height: 1.7em;
+        transition: .5s;
+    }
+    #portada{
+        background-position-x: -10em;
+        background-size: 150%;
+    }
+    #portada h1{
+        top: 7em;
+        left: 4em;
+        font-size: 1.7em;
+    }
+    #portada p{
+        top: 14em;
+        left: 6.2em;
+        width: 60%;
+        font-size: 1.1em;
+    }
+    #botonTeCuento{
+        top: 21em;
+        right: 8em;
+        font-size: 1.1em;
+    }
+    /* SOBRE MI */
+    #contenedorImgFotoP{
+        top: calc(25% - (18em/2));
+        left: calc(50% - (18em/2));
+        width: 18em;
+        height: 18em;
+    }
+    #imgFotoP{
+        width: 14em;
+        height: 14em;
+    }
+    #contenedorBarraInferior{
+        width: 13.9em;
+        height: 13.9em;
+        border: solid .9em transparent;
+        border-top-color: var(--color1);
+        border-right-color: var(--color1);
+    }
+    #contenedorBarraSuperior{
+        width: 15.6em;
+        height: 15.6em;
+        border: solid .9em transparent;
+        border-bottom-color: var(--color2);
+        border-left-color: var(--color2);
+    }
+    #textoSobreMi{
+        top: calc(65% - 15%);
+        left: calc(50% - 25%);
+        width: 50%;
+        height: 35%;
+    }
+    #textoSobreMi p{
+        font-size: 1em;
+    }
+    #tituloPortafolio{
+        font-size: 1em;
+    }
+    /*  */
+    #Portafolio{
+        height: calc((20em*3));
+        grid-template-columns: repeat(3, 18em);
+        grid-template-rows: repeat(3, 18em);
+    }
+    /* SECCION EMERGENTES */
+    #emergenteTelefono, #emergenteCorreo{
+        left: calc(50% - 15%);
+        width: 30%;
+    }
+    /* DETALLES PROYECTOS */
+    .proyectos::-webkit-scrollbar{
+        width: 10px;
+    }
+    .proyectos::-webkit-scrollbar-thumb{
+        background-color: var(--colorScroll);
+        border-radius: 5px;
+    }
+    }
+    @media (min-width: 1281px){
+    #cerrar{
+        display: none;
+    }
+    /* EMCABEZADO */
+    #iconRedeS{
+        width: 40%;
+    }
+    .redesS{
+        width: 2.5em;
+        height: 2.5em;
+    }
+    .redesS img{
+        width: 1.5em;
+        height: 1.5em;
+    }
+    .redesS:hover{
+        background-color: var(--color2);
+        transform: rotate(-30deg);
+        transition: .5s;
+    }
+    .redesS img:hover{
+        width: 1.7em;
+        height: 1.7em;
+        transition: .5s;
+    }
+    #portada{
+        background-position-x: 0em;
+        background-position-x: 0em;
+        background-size: 120%;
+    }
+    #portada h1{
+        top: 6.5em;
+        left: 4em;
+        font-size: 2em;
+    }
+    #portada p{
+        top: 15em;
+        left: 7.5em;
+        width: 45%;
+        font-size: 1.1em;
+    }
+    #botonTeCuento{
+        top: 17em;
+        right: 7.5em;
+        font-size: 1.1em;
+    }
+    /* SOBRE MI */
+    #contenedorImgFotoP{
+        top: calc(25% - (18em/2));
+        left: calc(50% - (18em/2));
+        width: 18em;
+        height: 18em;
+    }
+    #imgFotoP{
+        width: 14em;
+        height: 14em;
+    }
+    #contenedorBarraInferior{
+        width: 14em;
+        height: 14em;
+        border: solid 1em transparent;
+        border-top-color: var(--color1);
+        border-right-color: var(--color1);
+    }
+    #contenedorBarraSuperior{
+        width: 16em;
+        height: 16em;
+        border: solid 1em transparent;
+        border-bottom-color: var(--color2);
+        border-left-color: var(--color2);
+    }
+    #textoSobreMi{
+        top: calc(65% - 15%);
+        left: calc(50% - 20%);
+        width: 40%;
+        height: 35%;
+    }
+    #textoSobreMi p{
+        font-size: 1.3em;
+    }
+    #tituloPortafolio{
+        font-size: 1.2em;
+    }
+    /* PROYECTOS */
+    #Portafolio{
+        height: calc((20em*3));
+        grid-template-columns: repeat(4, 18em);
+        grid-template-rows: repeat(3, 18em);
+    }
+    /* SECCION EMERGENTES */
+    #emergenteTelefono, #emergenteCorreo{
+        left: calc(50% - (25%/2));
+        width: 25%;
+    }
+    /* DETALLES PROYECTOS */
+    .proyectos::-webkit-scrollbar{
+        width: 10px;
+    }
+    .proyectos::-webkit-scrollbar-thumb{
+        background-color: var(--colorScroll);
+        border-radius: 5px;
+    }
+    }

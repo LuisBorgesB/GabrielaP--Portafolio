@@ -1,5 +1,4 @@
 //  VARIABLES GLOBALES
-
 var imgMenu = document.getElementById('imgMenu')
 var portada = document.getElementById('portada')
 var emergenteTelefono = document.getElementById('emergenteTelefono')
@@ -11,10 +10,8 @@ var correo = document.getElementById('correo')
 var copyImgTelf = document.getElementById('imgEmergTelef')
 var copyImgCerr = document.getElementById('imgEmergCorreo')
 var confirmacionCopy = document.getElementById('confirmacionCopy')
-
 var botonSiguiente = document.getElementById('botonSiguiente')
 var botonAtras = document.getElementById('botonAtras')
-
 var proyecto_1 = document.getElementById('proyecto_1')
 var proyecto_2 = document.getElementById('proyecto_2')
 var proyecto_3 = document.getElementById('proyecto_3')
@@ -24,7 +21,6 @@ var proyecto_6 = document.getElementById('proyecto_6')
 var proyecto_7 = document.getElementById('proyecto_7')
 var proyecto_8 = document.getElementById('proyecto_8')
 var proyecto_9 = document.getElementById('proyecto_9')
-
 var foto1 = document.getElementById('dise_1');
 var foto2 = document.getElementById('dise_2');
 var foto3 = document.getElementById('dise_3');
@@ -34,11 +30,15 @@ var foto6 = document.getElementById('dise_6');
 var foto7 = document.getElementById('dise_7');
 var foto8 = document.getElementById('dise_8');
 var foto9 = document.getElementById('dise_9');
-
 var contenedorProyectos = document.getElementById('contenedorDetallePortafolio');
-
+var botonCerrar = document.getElementById('cerrar')
+// FUNCION VISUALIZAR HASTA QUE TODO ESTE CARGADO
+window.onload = function () {
+    this.body.style.visibility='visible'
+}
 // FUNCION CERRAR DETALLES
 fondoOscuroGeneral.addEventListener('click', function () {
+    botonCerrar.style.visibility="hidden"
     fondoOscuroGeneral.style.visibility="hidden"
     contenedorProyectos.style.visibility="hidden"
     body.style.overflowY=null
@@ -52,20 +52,35 @@ fondoOscuroGeneral.addEventListener('click', function () {
     proyecto_8.style.visibility="hidden"
     proyecto_9.style.visibility="hidden"
 })
-
+botonCerrar.addEventListener('click', function () {
+    botonCerrar.style.visibility="hidden"
+    fondoOscuroGeneral.style.visibility="hidden"
+    contenedorProyectos.style.visibility="hidden"
+    body.style.overflowY=null
+    proyecto_1.style.visibility="hidden"
+    proyecto_2.style.visibility="hidden"
+    proyecto_3.style.visibility="hidden"
+    proyecto_4.style.visibility="hidden"
+    proyecto_5.style.visibility="hidden"
+    proyecto_6.style.visibility="hidden"
+    proyecto_7.style.visibility="hidden"
+    proyecto_8.style.visibility="hidden"
+    proyecto_9.style.visibility="hidden"
+})
 // FUNCION ABRIR DETALLES
-
 foto1.addEventListener('click', function () {
     fondoOscuroGeneral.style.visibility="visible"
     contenedorProyectos.style.visibility="visible"
     body.style.overflowY="hidden"
     proyecto_1.style.visibility="visible"
+    botonCerrar.style.visibility='visible'
 })
 foto2.addEventListener('click', function () {
     fondoOscuroGeneral.style.visibility="visible"
     contenedorProyectos.style.visibility="visible"
     body.style.overflowY="hidden"
     proyecto_2.style.visibility="visible"
+    botonCerrar.style.visibility="visible"
 })
 foto3.addEventListener('click', function () {
     fondoOscuroGeneral.style.visibility="visible"
@@ -78,38 +93,43 @@ foto4.addEventListener('click', function () {
     contenedorProyectos.style.visibility="visible"
     body.style.overflowY="hidden"
     proyecto_4.style.visibility="visible"
+    botonCerrar.style.visibility="visible"
 })
 foto5.addEventListener('click', function () {
     fondoOscuroGeneral.style.visibility="visible"
     contenedorProyectos.style.visibility="visible"
     body.style.overflowY="hidden"
     proyecto_5.style.visibility="visible"
+    botonCerrar.style.visibility="visible"
 })
 foto6.addEventListener('click', function () {
     fondoOscuroGeneral.style.visibility="visible"
     contenedorProyectos.style.visibility="visible"
     body.style.overflowY="hidden"
     proyecto_6.style.visibility="visible"
+    botonCerrar.style.visibility="visible"
 })
 foto7.addEventListener('click', function () {
     fondoOscuroGeneral.style.visibility="visible"
     contenedorProyectos.style.visibility="visible"
     body.style.overflowY="hidden"
     proyecto_7.style.visibility="visible"
+    botonCerrar.style.visibility="visible"
 })
 foto8.addEventListener('click', function () {
     fondoOscuroGeneral.style.visibility="visible"
     contenedorProyectos.style.visibility="visible"
     body.style.overflowY="hidden"
     proyecto_8.style.visibility="visible"
+    botonCerrar.style.visibility="visible"
 })
 foto9.addEventListener('click', function () {
     fondoOscuroGeneral.style.visibility="visible"
     contenedorProyectos.style.visibility="visible"
     body.style.overflowY="hidden"
     proyecto_9.style.visibility="visible"
+    botonCerrar.style.visibility="visible"
 })
-
 // FUNCION SIGUIEN Y ATRAS
 botonSiguiente.addEventListener('click', function () {
     if (proyecto_1.style.visibility == "visible") {
@@ -165,7 +185,6 @@ botonAtras.addEventListener('click', function () {
         proyecto_8.style.visibility="visible"
     }
 })
-
 // FUNCION COPIAR EN PORTAPAPELES
 copyImgTelf.addEventListener('click', function () {
     let inputTemporal = document.createElement('input') 
@@ -203,7 +222,6 @@ copyImgCerr.addEventListener('click', function () {
     setTimeout(apareceConfirmacion, 0)
     setTimeout(desapareceConfirmacion, 1000)
 })
-
 // FUNCION DEZPLEGAR VENTANA CORREO Y TELEFONO
 telf.addEventListener('click', function () {
     fondoOscuroGeneral.style.visibility='visible'
@@ -223,7 +241,6 @@ fondoOscuroGeneral.addEventListener('click', function () {
         fondoOscuroGeneral.style.visibility='hidden'
     }
 })
-
 // FUNCION BAJAR PORTADA
 imgMenu.addEventListener('click', function () {
     if (portada.className == 'portadaArriba') {
@@ -233,8 +250,15 @@ imgMenu.addEventListener('click', function () {
         imgMenu.style.transform='rotate(0deg)'
         imgMenu.style.transition='1s'
     } else {
-        portada.classList.add('portadaArriba')
         portada.classList.remove('portadaAbajo')
+        portada.classList.add('portadaArriba')
+        imgMenu.style.transform='rotate(90deg)'
+    }
+})
+window.addEventListener('scroll', function () {
+    if (scrollY >= 80 ) {
+        portada.classList.remove('portadaAbajo')
+        portada.classList.add('portadaArriba')
         imgMenu.style.transform='rotate(90deg)'
     }
 })
