@@ -17,6 +17,7 @@
     --nivel4: 20;
     --nivel5: 25;
     --nivel6: 30;
+    --nivel6: 35;
     --border: 1px solid #ffffff;
     --border2: 1px solid #D3835F;
 }
@@ -28,6 +29,28 @@ body{
     background-color: var(--color3);
     font-family: 'Poppins', sans-serif;
     -webkit-tap-highlight-color: transparent;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    transform: trans;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: var(--colorScroll);
+    border-radius: 5px;
+}
+body::-webkit-scrollbar-thumb:hover{
+    background-color: var(--color2);
+}
+#fondoOscuroGeneral{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color:  rgba(0,0,0,0.8);
+    z-index: var(--nivel4);
+    overflow: hidden;
+    visibility: hidden;
 }
 /* EMCABEZADO */
 #encabezado{
@@ -262,7 +285,7 @@ body{
     position: relative;
     width: 100%;
     height: calc((20em*9));
-    z-index: var(--nivel4);
+    z-index: var(--nivel2);
     display: grid;
     grid-template-columns: repeat(1, 18em);
     grid-template-rows: repeat(9, 18em);
@@ -333,4 +356,130 @@ body{
 #diseImg_9{
     background-image: url(recursos/Dise9.jpg);
     background-size: 100%;
+}
+
+/* SECCION EMERGENTES */
+#emergenteTelefono, #emergenteCorreo{
+    position: fixed;
+    top: calc(50% - 15%);
+    left: calc(50% - 45%);
+    width: 90%;
+    height: 30%;
+    z-index: var(--nivel6);
+    background-color: var(--color3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    border-radius: 2em;
+    visibility: hidden;
+}
+#emergenteTelefono a, #emergenteCorreo a{
+    text-decoration: none;
+    color: #000000;
+}
+#Whatsapp, #llamar, #texTelf, #enviarCorreo, #textCorreo{
+    width: 70%;
+    height: 40px;
+    overflow: hidden;
+}
+#texTelf, #textCorreo{
+    display: flex;
+    align-items: center;
+}
+#TextoCorreo, #enviarCorreo p, #llamar p, #Whatsapp p, #NumTelefono{
+    color: var(--color1);
+}
+#enviarCorreo p:hover, #llamar p:hover, #Whatsapp p:hover{
+    color: var(--color2);
+}
+#imgEmergTelef, #imgEmergCorreo{
+    width: 1.5em;
+    height: 1.5em;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.imgCopy{
+    background-image: url(recursos/copy.png);
+    margin-left: 1.5em;
+}
+#confirmacionCopy{
+    position: fixed;
+    bottom: .5em;
+    left: calc(50% - (15em/2));
+    width: 15em;
+    height: 3em;
+    font-size: .8em;
+    font-weight: bold;
+    border-radius: 1em;
+    background-color: rgba(0, 128, 0, 0.603);
+    color: #ffffff;
+    visibility: hidden;
+    z-index: var(--nivel6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*  */
+
+#contenedorDetallePortafolio{
+    position: fixed;
+    top: 0;
+    left: calc(50% - (80%/2));
+    width: 80%;
+    height: 100%;
+    background-color: #ffffff6e;
+    visibility: hidden;
+    overflow: hidden;
+    z-index: calc(var(--nivel5));
+}
+#botonSiguiente, #botonAtras{
+    width: 1.5em;
+    height: 1.5em;
+    bottom: 1em;
+    position: absolute;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+#botonAtras{
+    left: 2em;
+}
+#botonSiguiente{
+    right: 2em;
+}
+
+#botonSiguiente img, #botonAtras img{
+    width: 80%;
+    height: 80%;
+}
+.proyectos::-webkit-scrollbar{
+    width: 0px;
+}
+.proyectos::-webkit-scrollbar-thumb{
+    background-color: var(--colorScroll);
+    border-radius: 0px;
+}
+.proyectos::-webkit-scrollbar-thumb:hover{
+    background-color: var(--color2);
+}
+.proyectos{
+    position: absolute;
+    top: 0;
+    width:100%;
+    height: calc(100% - 3.5em);;
+    overflow-y: scroll;
+}
+.proyectos img{
+    width: 100%;
+}
+#proyecto_1, #proyecto_2, #proyecto_3, #proyecto_4, #proyecto_5, #proyecto_6, #proyecto_7, #proyecto_8, #proyecto_9{
+    visibility: hidden;
 }
