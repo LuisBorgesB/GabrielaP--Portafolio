@@ -134,7 +134,7 @@ body::-webkit-scrollbar-thumb:hover{
 #imgMenu{
     position: fixed;
     top: 2em;
-    right: 2em;
+    right: 1em;
     width: 2.5em;
     height: 2.5em;
     background-image: url(recursos/menu.svg);
@@ -788,7 +788,7 @@ body::-webkit-scrollbar-thumb:hover{
     #portada{
         background-position-x: 0em;
         background-position-x: 0em;
-        background-size: 120%;
+        background-size: 110%;
     }
     #portada h1{
         top: 6.5em;
